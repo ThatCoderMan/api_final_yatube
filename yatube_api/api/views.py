@@ -5,7 +5,7 @@ from rest_framework.mixins import (CreateModelMixin, ListModelMixin,
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 
-from posts.models import Comment, Follow, Group, Post
+from posts.models import Follow, Group, Post
 
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
