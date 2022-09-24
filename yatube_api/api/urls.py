@@ -9,7 +9,7 @@ comment_router = SimpleRouter()
 router.register('posts', PostViewSet)
 router.register('groups', GroupViewSet)
 router.register('follow', FollowViewSet)
-comment_router.register('comments', CommentViewSet)
+comment_router.register('comments', CommentViewSet, basename='comments')
 
 
 urlpatterns = [
