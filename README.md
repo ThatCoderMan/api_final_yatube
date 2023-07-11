@@ -1,37 +1,60 @@
-# **YaTube API**
+# YaTube API
 
-### технологии в проекте
+![workflows](https://github.com/ThatCoderMan/api_final_yatube/actions/workflows/workflow.yml/badge.svg)
+
+<details>
+<summary>Project stack</summary>
+
 - Python 3.7
-- Django 2.2.16
-- Django rest framework 3.12.4
-- Djoser 2.1.0
+- Django 2.2
+- Django REST Framework 
+- Djoser 
+- GitHub Actions
+
+</details>
 
 ## Описание 
-API для проекта YaTube с возможностями публиковать, получать записи; 
-комментировать записи; подписываться на авторов.
+API для проекта "YaTube". Сайт "YaTube" - это онлайн-сервис для публикации, получения 
+записей, комментирования записей других пльзователей и подписки на авторов.
 
-## Установка 
-- Клонировать репозиторий с GitHub и перейти в него
-    ~~~
-    git clone https://github.com/ThatCoderMan/api_final_yatube.git
-    cd api_final_yatube
-  ~~~
-- Создать и активировать виртульное окружение, 
-установить зависимости из файла requirements.txt
-    ~~~
+### Инструкция по запуску:
+Клонируйте репозиторий:
+```commandline
+git clone git@github.com:ThatCoderMan/foodgram-project-react.git
+```
+Установите и активируйте виртуальное окружение:
+
+- *для MacOS:*
+    ```commandline
+    python3 -m venv venv
+    ```
+- *для Windows:*
+    ```commandline
     python -m venv venv
-    venv/Scripts/activate
-    pip install -r requirements.txt
-    ~~~
-- Выполнить миграции
-    ~~~
-    python yatube_api/manage.py migrate
-    ~~~
-- Запустить сервер 
-    ~~~
-    python yatube_api/manage.py runserver
-    ~~~
-  
+    source venv/bin/activate
+    source venv/Scripts/activate
+    ```
+Установите зависимости из файла requirements.txt:
+```commandline
+pip install -r requirements.txt
+```
+Перейти в папку yatube_api/
+```commandline
+cd yatube_api/
+```
+Примените миграции:
+```commandline
+python manage.py migrate
+```
+В папке с файлом manage.py выполните команду для запуска локально:
+```commandline
+python manage.py runserver
+```
+Документация к проекту доступна по адресу:
+```
+http://127.0.0.1:8000/redoc/
+```
+
 ## Примеры работы API
 
 Создание, изменение, удаление публиакаций; 
@@ -138,4 +161,6 @@ response: {access: str}
 
 body: {token: str}
 
-#### Автор: [Артемий Березин](https://github.com/ThatCoderMan)
+### Автор проекта:
+
+[Artemii Berezin](https://github.com/ThatCoderMan)
